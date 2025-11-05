@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    background-color: pink;
+    overflow: hidden;
+    font-family: 'Hiragino Sans', 'ヒラギノ角ゴシック', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+}
+
+.text {
+    position: absolute;
+    color: yellow;
+    white-space: nowrap;
+    user-select: none;
+    animation: fall linear;
+    z-index: 1;
+}
+
+.wataame {
+    color: #ADD8E6; /* Light Blue */
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-10vh);
+    }
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* Cloud Styles */
+#cloud-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.cloud {
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    background: #FFD1DC; /* A lighter pink */
+    border-radius: 200px;
+    opacity: 0.9;
+}
+
+.cloud:before, .cloud:after {
+    content: '';
+    position: absolute;
+    background: #FFD1DC;
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    top: -30px;
+    left: 50px;
+    border-radius: 100px;
+}
+
+.cloud:after {
+    width: 120px;
+    height: 90px;
+    top: -45px;
+    right: 40px;
+    left: auto;
+}
+
+.cloud1 {
+    top: 15%;
+    left: 10%;
+    transform: scale(1.2);
+}
+
+.cloud2 {
+    top: 30%;
+    right: 5%;
+    transform: scale(0.8);
+}
+
+.cloud3 {
+    top: 60%;
+    left: 25%;
+    transform: scale(1);
+}
