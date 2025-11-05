@@ -14,8 +14,49 @@ body {
     z-index: 1;
 }
 
-.wataame {
-    color: #ADD8E6; /* Light Blue */
+.wataame-container {
+    position: absolute;
+    width: 20px;
+    height: 12px;
+    animation: fall linear;
+    z-index: 1;
+}
+
+.wataame-container:before, .wataame-container:after {
+    content: '';
+    position: absolute;
+    background: #ADD8E6; /* Light Blue */
+    border-radius: 50%;
+}
+
+.wataame-container:before {
+    width: 14px;
+    height: 14px;
+    top: -4px;
+    left: 0;
+}
+
+.wataame-container:after {
+    width: 16px;
+    height: 16px;
+    top: -6px;
+    right: -2px;
+}
+
+.candy {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: repeating-linear-gradient(
+        45deg,
+        #d13, /* Red */
+        #d13 5px,
+        #fff 5px,
+        #fff 10px
+    );
+    border-radius: 50%;
+    animation: fall linear;
+    z-index: 1;
 }
 
 @keyframes fall {
