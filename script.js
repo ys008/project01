@@ -113,13 +113,34 @@ function createRainbow() {
     }, 4000); // Rainbow disappears after 4 seconds
 }
 
-// 200ミリ秒ごとに新しいテキストとわたあめとキャンディとアイスクリームとハートを生成
+function createShinopippi() {
+    const shinopippi = document.createElement('div');
+    shinopippi.classList.add('shinopippi');
+    shinopippi.textContent = 'しのぴっぴ';
+
+    const startX = Math.random() * window.innerWidth;
+    const fontSize = Math.random() * 30 + 20; // 20pxから50px
+    const duration = Math.random() * 5 + 4; // 4秒から9秒
+
+    shinopippi.style.left = `${startX}px`;
+    shinopippi.style.fontSize = `${fontSize}px`;
+    shinopippi.style.animationDuration = `${duration}s`;
+
+    document.body.appendChild(shinopippi);
+
+    setTimeout(() => {
+        shinopippi.remove();
+    }, duration * 1000);
+}
+
+// 200ミリ秒ごとに新しいテキストとわたあめとキャンディとアイスクリームとハートとしのぴっぴを生成
 setInterval(() => {
     createText();
     createWataame();
     createCandy();
     createIceCream();
     createHeart();
+    createShinopippi();
 }, 200);
 
 function createUnicorn() {

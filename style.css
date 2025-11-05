@@ -114,6 +114,16 @@ body {
     z-index: 1;
 }
 
+.shinopippi {
+    position: absolute;
+    color: #FF69B4; /* Vibrant Pink */
+    white-space: nowrap;
+    user-select: none;
+    animation: fall linear;
+    z-index: 1;
+    font-weight: bold;
+}
+
 .unicorn {
     position: absolute;
     bottom: 10%;
